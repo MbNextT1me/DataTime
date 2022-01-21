@@ -26,6 +26,7 @@ public:
 
 	int GetJDN();
 	double GetJD();
+	void foundEaster();
 
 	int operator - (DataTime &other);
 

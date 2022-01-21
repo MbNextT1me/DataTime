@@ -385,3 +385,18 @@ void DataTime::checkSampleFoo(std::string sample)
 		else if (correctTimeCounter != 3 and (strchr(sample.c_str(), 'T'))) throw std::exception("");
 	}
 }
+
+void DataTime::foundEaster()
+{
+	int a = year % 19;
+	int b = year % 4;
+	int c = year % 7;
+	int k = year / 100;
+	int d = (19 * a + 15) % 30;
+	int e = (2 * b + 4 * c + 6 * d + 6) % 7;
+
+	int f = d + e;
+
+	if (f > 26) std::cout << "Дата пасхи: " << (f - 26) << " " << getNameOfMonth(5) << "\n";
+	else if (f <= 26)std::cout << "Дата пасхи: " << (f + 4) << " " << getNameOfMonth(4) << "\n";
+}

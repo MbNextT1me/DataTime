@@ -64,6 +64,11 @@ int main()
 	DataTime wrong2("yy:mm:","12.01.2301");
 	DataTime wrong3("yyy-MM-ddThh:mm:Js", "2000-01-01T12:00:00");
 	data7.PrintData("yy:mm:");
+	std::cout << "==================================================";
+
+	std::cout << "\n\n==================================================\n";
+	DataTime EasterTest("01.01.2022");
+	EasterTest.foundEaster();
 	std::cout << "==================================================\n";
 
 	return 0;
